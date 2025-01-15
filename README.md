@@ -1,22 +1,11 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+A lightweight library that intelligently adjusts dropdown positioning to ensure it remains fully visible by opening either above or below the trigger button based on available space.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+## Features v0.0.1
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- The `AppAutoDropdown` widget support data list for not enough space.
+- The `parentScrollController` this is ScrollController of screen when scroll auto close dropdown.
+- The `DropItem` class has replaced the `DropListWidget` class.
+- `onSeleted` has been replaced with `onSeleted`. The `onSeleted` callback is called whenever the selection changes in the dropdown, whether it is selected or deselected.
 
 ## Getting started
 
@@ -24,19 +13,30 @@ TODO: List prerequisites and provide or point to information on how to
 start using the package.
 
 ## Preview
-| <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_top.png?raw=true" width="500px"> | <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_bottom.png?raw=true" width="500px"> |
+| <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_top.png?raw=true" width="250px"> | <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_bottom.png?raw=true" width="250px"> |
 
 ## Usage
 
+### Simple use
+
+### If you want to control auto close dropdown when scroll need to add parentScrollController in widget
+### scrollController is a scrollController of screen
 TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder.
 
-```dart
-const like = 'sample';
+List dropitem need to convert like  `DropItem` include `name` and `id` will required
+Inaddition, `DropItem` allow add flag prefix in to dropdown
+
+``` dart
+  final DropItem listDrop = DropItem(name: '', id: -1);
 ```
 
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+ AppAutoDropdown(
+    items: <DropItem>[],
+   label: '$Label',
+   hintText: '$Hint text',
+   parentScrollController: scrollController,
+   onSelected: (output){},
+ ),
+```
