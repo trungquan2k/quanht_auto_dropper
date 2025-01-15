@@ -19,10 +19,9 @@ start using the package.
 
 ### Simple use
 
-### If you want to control auto close dropdown when scroll need to add parentScrollController in widget
-### scrollController is a scrollController of screen
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+If you want to control auto close dropdown when scroll need to add `parentScrollController` in widget `parentScrollController` is a `scrollController` of screen
+
+TODO: Please check it to `/example` folder.
 
 List dropitem need to convert like  `DropItem` include `name` and `id` will required
 Inaddition, `DropItem` allow add flag prefix in to dropdown
@@ -34,9 +33,9 @@ Inaddition, `DropItem` allow add flag prefix in to dropdown
 ```dart
  AppAutoDropdown(
     items: <DropItem>[],
-   label: '$Label',
-   hintText: '$Hint text',
-   parentScrollController: scrollController,
-   onSelected: (output){},
+    label: '$Label',
+    hintText: '$Hint text',
+    parentScrollController: scrollController,
+    onSelected: (output){},
  ),
 ```
