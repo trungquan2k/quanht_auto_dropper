@@ -4,12 +4,6 @@ version: 0.0.1
 
 repository: https://github.com/trungquan2k/quanht_auto_dropper
 
-screenshots:
-  - description: "Drop list on the top"
-    path: pub/screenshots/on_the_top.png
-  - description: "Drop list on the bottonm"
-    path: pub/screenshots/on_the_bottom.png
-
 issue_tracker: https://github.com/trungquan2k/quanht_auto_dropper/issues
 documentation: https://github.com/trungquan2k/quanht_auto_dropper
 
