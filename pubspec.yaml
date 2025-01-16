@@ -1,6 +1,6 @@
 name: quanht_auto_dropper
-description: "A lightweight library that intelligently adjusts dropdown positioning to ensure it remains fully visible by opening either above or below the trigger button based on available space."
-version: 0.0.1
+description: "AutoDropper adjusts dropdowns to open above or below the trigger, ensuring full visibility based on available space for a seamless user experience."
+version: 0.0.4
 
 repository: https://github.com/trungquan2k/quanht_auto_dropper
 

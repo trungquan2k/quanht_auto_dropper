@@ -31,7 +31,7 @@ class AutoDropButtonStyle {
     this.radius = 8.0,
     this.width,
     this.elevation = 1,
-    this.padding = const EdgeInsets.symmetric(horizontal: 16),
+    this.padding = EdgeInsets.zero,
     this.shape,
   });
 }

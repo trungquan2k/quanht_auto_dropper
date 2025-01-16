@@ -1,27 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:quanht_auto_dropper/config/config.index.dart';
 
-import '../styles/auto_drop_style.dart';
+import '../styles/auto_drop.style.dart';
 import '../models/drop_item.dart';
 
 class AutoDropOverLay<T> extends StatefulWidget {
+  /// The list of dropdown items, where each item is represented as a `DropListWidget<T>`.
   final List<DropListWidget<T>> items;
 
-  // initValue is number index of list
+  /// Called when a dropdown item is selected.
+  /// Passes the selected `DropItem` object.
   final ValueChanged<DropItem>? onSelected;
 
+  /// The main widget displayed as the child of the dropdown (e.g., button, label).
   final Widget child;
 
+  /// The optional icon displayed alongside the dropdown; can be null.
   final Widget? iconDropdown;
 
+  /// Controls the scrolling behavior of the parent widget.
   final ScrollController parentScrollController;
 
+  /// Defines the styles for the dropdown button (e.g., size, color, padding).
   final AutoDropButtonStyle dropButtonStyle;
 
+  /// Defines the styles for the dropdown menu (e.g., background color, shadow).
   final AutoDropStyle dropStyle;
 
+  /// Determines if the dropdown is enabled for user interaction.
+  /// If `false`, the dropdown is disabled.
   final bool enabled;
 
+  /// If true, hides the dropdown icon.
   final bool hideIcon;
 
   const AutoDropOverLay({
@@ -128,7 +138,6 @@ class _AutoDropOverLayState extends State<AutoDropOverLay>
         key: _key,
         onTap: widget.enabled ? _toggleDropdown : null,
         child: Container(
-          // padding: const EdgeInsets.all(AppSpacing.x16),
           width: style.width ?? MediaQuery.of(context).size.width,
           height: style.height,
           padding: style.padding,
