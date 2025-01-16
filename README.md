@@ -13,7 +13,7 @@ TODO: List prerequisites and provide or point to information on how to
 start using the package.
 
 ## Preview
-| <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_top.png?raw=true" width="250px"> | <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_bottom.png?raw=true" width="250px"> |
+|<img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_top.png?raw=true" width="250px">| <img src="https://github.com/trungquan2k/quanht_auto_dropper/blob/develop/assets/on_the_bottom.png?raw=true" width="250px"> |
 
 ## Usage
 
