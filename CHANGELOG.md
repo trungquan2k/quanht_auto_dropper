@@ -1,3 +1,9 @@
+## 0.0.6
+
+* update analysis_option
+* remove required parentScrollController(optional)
+
+
 ## 0.0.5
 
 * update public member api docs

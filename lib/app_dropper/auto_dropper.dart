@@ -9,7 +9,7 @@ import 'package:quanht_auto_dropper/widgets/hintext_drop.dart';
 import 'auto_drop_overlay.dart';
 
 class AppAutoDropdown extends StatefulWidget {
-  final ScrollController parentScrollController;
+  final ScrollController? parentScrollController;
 // Controls the scrolling behavior of the parent widget.
 
   /// Called when the selected dropdown option changes.
@@ -81,7 +81,7 @@ class AppAutoDropdown extends StatefulWidget {
 
   const AppAutoDropdown({
     super.key,
-    required this.parentScrollController,
+    this.parentScrollController,
     required this.onSelected,
     required this.items,
     this.dropdownStyle = const AutoDropStyle(),

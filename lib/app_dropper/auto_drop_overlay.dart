@@ -19,7 +19,7 @@ class AutoDropOverLay<T> extends StatefulWidget {
   final Widget? iconDropdown;
 
   /// Controls the scrolling behavior of the parent widget.
-  final ScrollController parentScrollController;
+  final ScrollController? parentScrollController;
 
   /// Defines the styles for the dropdown button (e.g., size, color, padding).
   final AutoDropButtonStyle dropButtonStyle;
@@ -37,7 +37,7 @@ class AutoDropOverLay<T> extends StatefulWidget {
   const AutoDropOverLay({
     super.key,
     required this.items,
-    required this.parentScrollController,
+    this.parentScrollController,
     required this.child,
     this.onSelected,
     this.iconDropdown,
@@ -117,7 +117,8 @@ class _AutoDropOverLayState extends State<AutoDropOverLay>
   }
 
   _scrollListener() {
-    widget.parentScrollController.addListener(() {
+    if (widget.parentScrollController == null) return;
+    widget.parentScrollController?.addListener(() {
       if (_isOpen) {
         _toggleDropdown(close: true);
       }
